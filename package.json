@@ -1,0 +1,22 @@
+{
+  "name": "assignment01",
+  "version": "1.0.0",
+  "description": "Portfolio website runs  on express server",
+  "main": "main.js",
+  "scripts": {
+    "test": "server is on"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ali-Arani/Assignment01.git"
+  },
+  "author": "Alireza Akramian Arani",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ali-Arani/Assignment01/issues"
+  },
+  "homepage": "https://github.com/Ali-Arani/Assignment01#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
