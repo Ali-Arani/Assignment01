@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "description": "Portfolio website runs  on express server",
-  
   "scripts": {
     "start": "node ./bin/www",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,6 +18,8 @@
   },
   "homepage": "https://github.com/Ali-Arani/Assignment01#readme",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.2.0",
+    "bootstrap": "^5.2.2",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "ejs": "~2.6.1",
