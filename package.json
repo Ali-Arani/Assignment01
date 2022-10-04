@@ -1,10 +1,12 @@
 {
   "name": "assignment01",
   "version": "1.0.0",
+  "private": true,
   "description": "Portfolio website runs  on express server",
-  "main": "main.js",
+  
   "scripts": {
-    "test": "server is on"
+    "start": "node ./bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -17,6 +19,11 @@
   },
   "homepage": "https://github.com/Ali-Arani/Assignment01#readme",
   "dependencies": {
-    "express": "^4.18.1"
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1"
   }
 }
