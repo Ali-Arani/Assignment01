@@ -40,5 +40,14 @@ router.get('/services', function(req, res, next) {
     }
   );
 });
+router.get('/contact', function(req, res, next) {
+  res.render(
+    'contact', 
+    { 
+      title:'contact', 
+      name: 'Alireza'
+    }
+  );
+});
 
 module.exports = router;
