@@ -1,11 +1,18 @@
-
-/* .container-fluid{
-
-    margin: 100px 20px 100px 20px;
-    border: 1px solid black;
-    /* width:100%; */
-    
+footer {
+  position: fixed;
+  height: 100px;
+  bottom: 0;
+  width: 100%;
 }
-body{
-    
-} */
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 55px;
+  color: red;
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 55px;
+  color: red;
+}
