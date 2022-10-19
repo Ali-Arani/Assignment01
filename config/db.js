@@ -1,4 +1,4 @@
-atlasDB="mongodb+srv://dbuser:xh18KWDMtXZDMw3s@cluster1.x4anyjk.mongodb.net/?retryWrites=true&w=majority"
+atlasDB="mongodb+srv://dbuser:xh18KWDMtXZDMw3s@cluster1.x4anyjk.mongodb.net/contactDatabase?retryWrites=true&w=majority"
 
 let mongoose=require('mongoose');
 
