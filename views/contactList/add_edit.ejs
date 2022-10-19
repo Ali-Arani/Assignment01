@@ -1,0 +1,63 @@
+<%- include('../partials/header'); %>
+
+<!-- Content for the Add_Edit page -->
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h1><%= title %></h1>
+
+            <form class="form" method="POST">
+                <div class="form-group">
+                    <input type="hidden"
+                        name="id"
+                        value="<%= name._id %>"
+                    >
+                    <label for="itemTextField"> Name</label>
+                    <input type="text" class="form-control"
+                        id="itemTextField"
+                        placeholder="Enter the Item Name"
+                        name="name" 
+                        value="<%= name.name %>"
+                        required>
+                </div>
+                <br />
+                <div class="form-group">
+                    <label for="NumTextField">Number</label>
+                    <input type="text" class="form-control"
+                    id="numTextField"
+                    placeholder="00"
+                    name="number" 
+                    value="<%= name.number %>"
+                    required>
+                </div>
+                <br />
+                <div class="form-group">
+                    <label for="emailTextField">Email</label>
+                    <input type="text" class="form-control"
+                    id="emailTextField"
+                    placeholder="Enter an Email"
+                    name="email" 
+                    value="<%= name.email %>"
+                    >
+                </div>
+                <br />
+               
+                <br/>
+
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-edit"></i> 
+                    Submit
+                </button>
+                
+                <a href="/contactList/list" class="btn btn-warning">
+                    <i class="fas fa-undo"></i> 
+                    Cancel
+                </a>
+
+            </form>
+        </div>
+
+    </div>
+</div>
+
+<%- include('../partials/footer'); %>

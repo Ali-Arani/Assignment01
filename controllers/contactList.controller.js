@@ -23,7 +23,7 @@ exports.contactListView = function(req, res, next) {
 module.exports.displayEditPage = (req, res, next) => {
     let id = req.params.id;
 
-    ContactList.findById(id, (err, itemToEdit) => {
+    ContactList.findById(id, (err, nameToEdit) => {
         if(err)
         {
             console.log(err);
@@ -33,7 +33,7 @@ module.exports.displayEditPage = (req, res, next) => {
         {
             //show the edit view
             res.render('contactList/add_edit', {
-                title: 'Edit Name', 
+                title: 'Edit Contact', 
                 name: nameToEdit
             })
         }
@@ -44,7 +44,7 @@ module.exports.displayEditPage = (req, res, next) => {
 module.exports.processEditPage = (req, res, next) => {
     let id = req.params.id
 
-    let updatedItem = ContactList({
+    let updatedName = ContactList({
         _id: req.body.id,
         name: req.body.name,
         number: req.body.number,
@@ -70,25 +70,25 @@ ContactList.updateOne({_id: id}, updatedName, (err) => {
 }
 
 module.exports.displayAddPage = (req, res, next) => {
-    let newItem = ContactList();
+    let newName = ContactList();
 
     res.render('contactList/add_edit', {
-        title: 'Add a new Name',
+        title: 'Add a new Contact',
         name: newName
     })          
 }
 
 module.exports.processAddPage = (req, res, next) => {
-    let newItem = ContactList({
+    let newName = ContactList({
         _id: req.body.id,
-        item: req.body.name,
+        name: req.body.name,
         number: req.body.number,
         email: req.body.email
        
     });
 
 
-ContactList.create(newName, (err, item) =>{
+ContactList.create(newName, (err, name) =>{
     if(err)
     {
         console.log(err);

@@ -10,7 +10,7 @@
         <div>
             <a href="/contactList/add" class="btn btn-primary align-self-end" role="button">
                 <i class="fas fa-plus-circle"></i> 
-                Add a new Item
+                Add a new contact
             </a>                
         </div>
 
@@ -21,7 +21,6 @@
                     <th class="text-center">Name</th>
                     <th class="text-center">Number</th>
                     <th class="text-center">Email</th>
-                    <th>Size</th>
                     <th class="text-center" colspan="2">Actions</th>
                 </tr>
 
@@ -32,7 +31,7 @@
                         <td class="text-center"><%= ContactListView[count].name %></td>
                         <td class="text-center"><%= ContactListView[count].number %></td>
                         <td class="text-center"><%= ContactListView[count].email %></td>
-                       
+                        
                         <td class="text-center">
                             <a href="/contactList/edit/<%= ContactListView[count]._id %>" class="btn btn-primary btn-sm">
                             <i class="fas fa-pencil-alt"></i></a>
