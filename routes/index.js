@@ -6,15 +6,7 @@ let indexController=require('../controllers/index.controller');
 
 router.get('/', indexController.home);
 
-router.get('/about', function(req, res, next) {
-  res.render(
-    'about', 
-    { 
-      title:'About', 
-      name: 'Alireza'
-    }
-  );
-});
+router.get('/about', indexController.about );
 router.get('/project',indexController.projects );
 router.get('/services', indexController.services);
 router.get('/contact',indexController.contact );
