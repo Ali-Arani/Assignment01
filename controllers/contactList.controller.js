@@ -12,7 +12,8 @@ exports.contactListView = function(req, res, next) {
         {
             res.render('contactList/list', {
                 title: 'Contact List', 
-                ContactListView: contactListView
+                ContactListView: contactListView,
+                userName: req.user ? req.user.username : ''
             })            
         }
     });
@@ -34,7 +35,8 @@ module.exports.displayEditPage = (req, res, next) => {
             //show the edit view
             res.render('contactList/add_edit', {
                 title: 'Edit Contact', 
-                name: nameToEdit
+                name: nameToEdit,
+                userName: req.user ? req.user.username : ''
             })
         }
     });
@@ -74,7 +76,8 @@ module.exports.displayAddPage = (req, res, next) => {
 
     res.render('contactList/add_edit', {
         title: 'Add a new Contact',
-        name: newName
+        name: newName,
+        userName: req.user ? req.user.username : ''
     })          
 }
 

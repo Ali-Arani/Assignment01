@@ -3,7 +3,7 @@ exports.home=function(req, res, next) {
       'index', 
       { 
         title:'Home', 
-        name: 'Alireza'
+        userName: req.user ? req.user.username : ''
       }
     );
   };
@@ -12,7 +12,7 @@ exports.home=function(req, res, next) {
       'project', 
       { 
         title:'project', 
-        name: 'Alireza'
+        userName: req.user ? req.user.username : ''
       }
     );
   };
@@ -21,7 +21,7 @@ exports.home=function(req, res, next) {
       'services', 
       { 
         title:'services', 
-        name: 'Alireza'
+        userName: req.user ? req.user.username : ''
       }
     );
   };
@@ -30,7 +30,7 @@ exports.home=function(req, res, next) {
       'contact', 
       { 
         title:'contact', 
-        name: 'Alireza'
+        userName: req.user ? req.user.username : ''
       }
     );
   };
@@ -39,7 +39,7 @@ exports.home=function(req, res, next) {
       'about', 
       { 
         title:'About', 
-        name: 'Alireza'
+        userName: req.user ? req.user.username : ''
       }
     );
   };
