@@ -65,7 +65,7 @@ module.exports.signup = function(req, res, next) {
         let message = getErrorMessage(err);
 
         req.flash('error', message);
-        // return res.redirect('/users/signup');
+        
         return res.render('auth/signup', {
           title: 'Sign-up Form',
           messages: req.flash('error'),
@@ -83,11 +83,8 @@ module.exports.signup = function(req, res, next) {
 };
 
 module.exports.signout = function(req, res, next) {
-  // Version 0.5.0
-  // req.logout();
-  // res.redirect('/');
+ 
 
-  // Version 0.6.0
   req.logout(function(err) {
     if (err) { 
       return next(err); 
@@ -98,7 +95,7 @@ module.exports.signout = function(req, res, next) {
 
 module.exports.signin = function(req, res, next){
   passport.authenticate('local', {   
-    successRedirect: req.session.url || '/',
+    successRedirect: req.session.url || '/contactList/list',
     failureRedirect: '/users/signin',
     failureFlash: true
   })(req, res, next);

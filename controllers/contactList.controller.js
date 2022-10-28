@@ -16,7 +16,7 @@ exports.contactListView = function(req, res, next) {
                 userName: req.user ? req.user.username : ''
             })            
         }
-    });
+    }).collation({locale: "en" }).sort({name: 'asc'});
 
 }
 
@@ -64,9 +64,8 @@ ContactList.updateOne({_id: id}, updatedName, (err) => {
     }
     else
     {
-        // console.log(req.body);
-        // refresh the book list
-        res.redirect('/contactList/list');
+            // refresh the Contact list
+            res.redirect('/contactList/list');
     }
 });
 }
@@ -99,7 +98,7 @@ ContactList.create(newName, (err, name) =>{
     }
     else
     {
-        // refresh the book list
+        // refresh the contact list
         console.log(name);
         res.redirect('/contactList/list');
     }

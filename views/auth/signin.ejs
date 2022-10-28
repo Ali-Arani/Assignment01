@@ -1,9 +1,9 @@
 <%- include ('../partials/header') %>
 
-<div class="container">
+<div class="container  mx-auto">
     <div class="row">
 
-        <div class="offset-md-3 col-md-3">
+        <div class="offset-md-3 col-md-3  border border-primary rounded p-3 mx-auto">
             <h1><%= title %></h1>
             <% for(var i in messages) { %>
                 <div class="flash"><%= messages[i] %></div>
@@ -18,8 +18,8 @@
                     <input type="password" name="password" class="form-control"/>
                 </div>
                 <br>
-                <div class="form-group">
-                    <input class="btn btn-primary" type="submit" value="Sign In" />                    
+                <div class="form-group text-center">
+                    <input class="btn btn-primary " type="submit" value="Sign In" />                    
                 </div>
                 <br>
                 <div class="form-group">
